@@ -75,16 +75,16 @@ After identifying the seam in the image (either vertical or horizontal), the nex
 **Reducing the width of the image by 100 pixels**
 <br/>
 <br/>
-![](seam_vertical.gif)
+![](public_imgs/seam_vertical_gif.gif)
 
 We can see how the above image width is getting reduced by finding out 100 vertical seams of minimum total energy in this case. It can be observed that the pixels are being removed without actually affecting the content of the image. This is the main idea of **Content-aware image resizing**
 
 **Reducing the height of the image by 100 pixels**
 <br/>
 <br/>
-![](seam_horizontal.gif)
+![](public_imgs/seam_horizontal_gif.gif)
 
-We can see how the above image height is getting reduced by finding out 100 vertical seams of minimum total energy in this case. The blurry part down is occuring due to change in height of images in every iteration.
+We can see how the above image height is getting reduced by finding out 100 vertical seams of minimum total energy in this case. The blurry part down is occuring due to change in height of images as we are removing the minimum energy pixels in every iteration.
 
 This concludes the seam-carving algorithm to reduce the width (or) height of an image.
 
@@ -116,9 +116,12 @@ We can now find our resized images by height and width in their respective outpu
 
 We can also explore other features using seam carving algorithm. 
 
-[x] Downscaling the images (reduce the width and height of the image) <br/>
-[ ] Upscaling the images (increase the width and height of the image) <br/>
-[ ] Objection deletion in the images <br/>
+- [x] Downscaling the images (reduce the width and height of the image) 
+- [ ] Upscaling the images (increase the width and height of the image) 
+- [ ] Objection deletion in the images
 
 ## Authors
 * **Kalyan Chirla**
+
+
+
