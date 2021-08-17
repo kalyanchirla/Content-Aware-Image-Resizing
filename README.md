@@ -13,19 +13,6 @@ Let us look at an example below to get a clear understanding of the problem
 \
 \
 ![](https://i.imgur.com/PUexRrt.jpg)
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 In the example above, we can see how the original image's(left image) width has been reduced to get the output image (right image). In this example, the original image has been reduced by 75 pixels.
 
@@ -43,8 +30,7 @@ The overall idea of seam carving is to find a number of lowest energy seam (eith
 
 After finding the energies at every pixel of the image, we can map to a gray-scale heatmap in which the important features of the image are shown in white and less important features which can be removed are shown in black color. Let us look at an example down below:
 
-<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
-<img align="ight" src="https://i.imgur.com/8ghf9sM.png">
+![](https://i.imgur.com/mZrCT31.jpg)
 
 Looking at the images above, the energy-image(right image) which is a gray-scale heatmap clearly depicts the important features of the original image (left image). 
 
@@ -63,22 +49,10 @@ Running the above steps for all the pixels of the image will give us a 2D array 
 We can even display the minimum energy seam path of the image by modifying those minimum energy pixels to any one color that we want. I have used red (255,0,0) to display vertical seam and green (0,255,0) to display horizontal seam although the colors can be of personal choice
 
 **NOTE: The process is similar to find out the horizontal seam of minimum total energy where we start from 0th column to last column instead of starting from 0th row**
-\
-<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
-<img align="right" src="https://i.imgur.com/7esvCc7.png">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+![](https://i.imgur.com/jB3KSp8.jpg)
+
 In the images shown above, we can see the minimum vertical seam path as a red line drawn (right image) in the first iteration. The next step is to remove the pixels in that seam.
 
 #### STEP 3: Seam Removal
@@ -86,24 +60,9 @@ In the images shown above, we can see the minimum vertical seam path as a red li
 After identifying the seam in the image (either vertical or horizontal), the next step is to remove the pixels in the seam from the last row to the 0th row backtracking through the parent stored in the current cell. We perform this seam removal step iteratively for N times finding out 'N' minimum seams of total energy and removing those 'N' seams to reduce the width or height of the image by 'N' pixels
 
 **Reducing the width of the image by 75 pixels**
-\
-<img align="left" width="400" height="400" src="https://i.imgur.com/tO1RnOt.gif">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+![](seam_vertical.gif)
+
 We can see how the above image width is getting reduced by finding out 75 vertical seams of minimum total energy in this case. It can be observed that the pixels are being removed without actually affecting the content of the image. This is the main idea of **Content-aware image resizing**
+
