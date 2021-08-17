@@ -12,8 +12,7 @@ Let us look at an example below to get a clear understanding of the problem
 **Reducing the width of the original image**
 \
 \
-<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
-<img align="right" src="https://i.imgur.com/suu2qHW.png">
+![](https://i.imgur.com/PUexRrt.jpg)
 <br/>
 <br/>
 <br/>
