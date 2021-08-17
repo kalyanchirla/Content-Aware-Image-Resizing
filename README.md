@@ -11,12 +11,9 @@ Let us look at an example below to get a clear understanding of the problem
 \
 **Reducing the width of the original image**
 \
-<img align="left" src="https://i.imgur.com/60hVf6n.jpg">
-<img align="right" src="https://i.imgur.com/4pu7o0w.png">
-<br/>
-<br/>
-<br/>
-<br/>
+\
+<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
+<img align="right" src="https://i.imgur.com/suu2qHW.png">
 <br/>
 <br/>
 <br/>
@@ -47,8 +44,8 @@ The overall idea of seam carving is to find a number of lowest energy seam (eith
 
 After finding the energies at every pixel of the image, we can map to a gray-scale heatmap in which the important features of the image are shown in white and less important features which can be removed are shown in black color. Let us look at an example down below:
 
-<img align="left" src="https://i.imgur.com/60hVf6n.jpg">
-<img align="ight" src="https://i.imgur.com/QTjwuTV.png">
+<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
+<img align="ight" src="https://i.imgur.com/8ghf9sM.png">
 
 Looking at the images above, the energy-image(right image) which is a gray-scale heatmap clearly depicts the important features of the original image (left image). 
 
@@ -68,12 +65,8 @@ We can even display the minimum energy seam path of the image by modifying those
 
 **NOTE: The process is similar to find out the horizontal seam of minimum total energy where we start from 0th column to last column instead of starting from 0th row**
 \
-<img align="left" src="https://i.imgur.com/60hVf6n.jpg">
-<img align="right" src="https://i.imgur.com/9Co5X7B.png">
-<br/>
-<br/>
-<br/>
-<br/>
+<img align="left" src="https://i.imgur.com/01hMY9U.jpg">
+<img align="right" src="https://i.imgur.com/7esvCc7.png">
 <br/>
 <br/>
 <br/>
@@ -96,19 +89,22 @@ After identifying the seam in the image (either vertical or horizontal), the nex
 **Reducing the width of the image by 75 pixels**
 \
 <img align="left" width="400" height="400" src="https://i.imgur.com/tO1RnOt.gif">
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 We can see how the above image width is getting reduced by finding out 75 vertical seams of minimum total energy in this case. It can be observed that the pixels are being removed without actually affecting the content of the image. This is the main idea of **Content-aware image resizing**
