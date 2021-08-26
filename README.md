@@ -27,6 +27,13 @@ In the images above, we can see how the original image's(left image) height has 
 
 *Note: The white space in the right image is added to show the height difference between two images. You will not be getting the white space when you run the code.*
 
+**Object Removal**
+<br/>
+<br/>
+![](public_imgs/object_removed.jpg)
+
+In the images above, we can see how the object in the original image(left image) has been removed in the output(right image) using the seam carving technique.
+
 ### Process
 
 There are multiple steps involved to implement the following.
@@ -88,6 +95,13 @@ We can see how the above image height is getting reduced by finding out 100 vert
 
 This concludes the seam-carving algorithm to reduce the width (or) height of an image.
 
+**Object Removal**
+<br/>
+<br/>
+![](public_imgs/remove_object_gif.gif)
+
+We can see how the object is being removed from the image using seam carving technique. This is just an extension of normal seam carving technique. We select the area of the object to be removed and change the energy values of the corresponding pixels to a minimum value so that any seam that passes through the pixels should pass through the pixels corresponding to the object.
+
 ### How to Run
 
 1.`energy_image.py` is used calculate the energies at every pixel of the image and to visualize the gray-scale energy heatmap. To run this and see the energy heatmap, we need to pass 2 arguments: the path to input image and the path to the output image
@@ -112,13 +126,20 @@ We can now see our horizontal and vertical seam visualizations in their respecti
 
 We can now find our resized images by height and width in their respective output files.
 
+4.`remove_object.py` is used to remove an object in the file. To run this file, we need to pass 2 arguments as input: the path to input image and the path to the output image
+
+`$ python remove_object.py input_image.jpg output_image.jpg`
+
+We can now see the image with the selected object removed in "output_image.jpg"
+
+
 ### Future work
 
 We can also explore other features using seam carving algorithm. 
 
 - [x] Downscaling the images (reduce the width and height of the image) 
 - [ ] Upscaling the images (increase the width and height of the image) 
-- [ ] Objection deletion in the images
+- [x] Objection deletion in the images
 
 ## Authors
 * **Kalyan Chirla**
